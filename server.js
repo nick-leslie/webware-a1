@@ -3,13 +3,17 @@ const http = require('http'),
       port = 3000;
 
 const server = http.createServer( function( request,response ) {
-  switch( request.url ) {
+  switch (request.url) {
     case '/':
-      sendFile( response, 'index.html' );
+      sendFile(response, 'index.html');
       break;
     case '/index.html':
-      sendFile( response, 'index.html' );
+      sendFile(response, 'index.html');
       break;
+    // case '/styles.css':
+    //   console.log("test");
+    //   sendFile(response, 'styles.css');
+    //   break;
     default:
       response.end( '404 Error: File Not Found' );
   }
@@ -22,3 +26,5 @@ const sendFile = function( response, filename ) {
      response.end( content, 'utf-8' );
    });
 }
+
+console.log("started at http://localhost:3000")

@@ -1,1 +1,6 @@
-
+.table-overall {
+    background-color: tan;
+}
+.table-row {
+    padding: 0px 10px;
+}
