@@ -1,4 +1,4 @@
-name = "dot_game"
+name = "todo_app"
 target = "javascript"
 version = "1.0.0"
 
