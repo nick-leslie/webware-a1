@@ -1,6 +1,85 @@
 .table-overall {
-    background-color: tan;
+    border-collapse: collapse;
 }
 .table-row {
-    padding: 0px 10px;
+}
+
+.table-element {
+    padding: 3px 7px;
+    border: 2px solid #ddd;
+}
+
+.table-header {
+    text-align: left;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr
+}
+
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+}
+
+.tab-hidden {
+    display: none;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.gap-5 {
+    gap: 1.25rem;
+}
+
+.deep-sky-blue {
+    background-color: #30C5FF;
+}
+
+.eggshell {
+    background-color: #FAF3DD;
+}
+
+.payne-gray {
+    background-color: #2E6171;
+}
+
+.periwinkle {
+    background-color: #DAC4F7;
+}
+
+.pumpkin {
+    background-color: #F17105;
+}
+
+
+.nav-element {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+}
+
+.width-full {
+    width: 100%;
+}
+
+td, th {
+  border: 1px solid #F17105;
+  text-align: left;
+  padding: 8px;
+}
+
+th {
+    background-color: #2E6171;
+    color: #FAF3DD;
+}
+
+tr:nth-child(even) {
+  background-color: #F17105;
 }

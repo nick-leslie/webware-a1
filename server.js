@@ -10,10 +10,24 @@ const server = http.createServer( function( request,response ) {
     case '/index.html':
       sendFile(response, 'index.html');
       break;
-    // case '/styles.css':
-    //   console.log("test");
-    //   sendFile(response, 'styles.css');
-    //   break;
+    case '/styles.css':
+      sendFile(response, 'styles.css');
+      break;
+    case '/hobby':
+      sendFile(response, 'hobby.html');
+      break;
+    case '/hobby.html':
+      sendFile(response, 'hobby.html');
+      break;
+    case '/priv/static/dot_game.mjs':
+    case '/app':
+      response.setHeader("content-type", "text/javascript")
+      sendFile(response, "./priv/static/dot_game.mjs");
+      break;
+    case '/mainjs':
+      response.setHeader("content-type", "text/javascript")
+      sendFile(response, "./main.js");
+      break;
     default:
       response.end( '404 Error: File Not Found' );
   }

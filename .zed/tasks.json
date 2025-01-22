@@ -4,7 +4,7 @@
 [
   {
     "label": "start",
-    "command": "npm run start",
+    "command": "./start.sh",
     //"args": [],
     // Env overrides for the command, will be appended to the terminal's environment from the settings.
     "env": { "foo": "bar" },

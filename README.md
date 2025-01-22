@@ -59,7 +59,7 @@ This assignment requires that your website is both contained in a GitHub reposit
 7. Test your project to make sure that when someone goes to your main page, it displays correctly. You can do this locally by simply running `node server.js` from within the assignment directory.
 8. Modify the README file according to the specification below.
 9. Commit and push all your changes to GitHub. 
-10. Deploy your project to Glitch. You can do this by [importing the repo from GitHub](https://medium.com/glitch/import-code-from-anywhere-83fb60ea4875)
+10. Deploy your project to Glitch. You can do this by [importing the repo from GitHub](http s://medium.com/glitch/import-code-from-anywhere-83fb60ea4875)
 11. Ensure that your project has the proper naming scheme (guide follows) so we can find it.
 9. Create and submit a Pull Request to the original repo.
 

@@ -4,182 +4,256 @@
     <title>CS4241 Assignment 1</title>
     <meta charset="utf-8">
     <link href="/styles.css" rel="stylesheet">
+    <script src="/mainjs"></script>
   </head>
-  <body>
+  <body class="eggshell">
+    <nav class="flex-row deep-sky-blue ">
+        <a class="nav-element" href="/">About</a>
+        <a class="nav-element" href="/hobby.html">Hobbys</a>
+    </nav>
     <h1>Nick Leslie</h1>
-    <div>
-      <p>Pronouns: they/them</p>
-      <p>Class: 2025</p>
-      <p>Major: Computer Sceince</p>
+    <div class="grid">
+        <div>
+            <img src="https://media.licdn.com/dms/image/v2/D4E35AQETz5mvrD838Q/profile-framedphoto-shrink_100_100/profile-framedphoto-shrink_100_100/0/1693773577382?e=1738188000&v=beta&t=kAyBXyhJyWkF9FP0WfwMDKsd0PNk9LWwnqMFTqlG2r0"/>
+            <p><b>Pronouns:</b> they/them</p>
+            <p><b>Class:</b> 2025</p>
+            <p><b>Major:</b> Computer Science</p>
+            <p><b>Contacts:</b><a href="https://github.com/nick-leslie">Github</a> <a href="https://www.linkedin.com/in/nick-leslie/">Linkedin</a> </p>
+            <p><b>About me:</b> Hi all my name is Nick. Im a 22 year old computer science studdent at WPI.
+                My main focus in computer science is in full stack development
+                however I also like to dig into cyber security and game development.
+            </p>
+        </div>
+        <div>
+            <h1>Courses</h1>
+            <table class="table-overall width-full">
+                <tr class="table-row">
+                    <th class="table-element table-header">Course</th>
+                    <th class="table-element table-header">Year</th>
+                    <th class="table-element table-header">Term</th>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 1101 - Introduction To Program Design</td>
+                    <td class="table-element">2021</td>
+                    <td class="table-element">A</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 2102 - Object-Oriented Design Concepts</td>
+                    <td class="table-element">2021</td>
+                    <td class="table-element">B</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 2303 - Systems Programming Concepts</td>
+                    <td class="table-element">2022</td>
+                    <td class="table-element">C</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 2223 - Algorithms</td>
+                    <td class="table-element">2022</td>
+                    <td class="table-element">D</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 3043 - Social Implications Of Information Processing</td>
+                    <td class="table-element">2022</td>
+                    <td class="table-element">A</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 2011 - Introduction To Machine Organization And Assembly Language</td>
+                    <td class="table-element">2022</td>
+                    <td class="table-element">B</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 4536 - Programming Languages</td>
+                    <td class="table-element">2023</td>
+                    <td class="table-element">A</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 4341 - Introduction To Artificial Intelligence</td>
+                    <td class="table-element">2023</td>
+                    <td class="table-element">B</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 3516 - Computer Networks</td>
+                    <td class="table-element">2023</td>
+                    <td class="table-element">B</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 3013 - Operating Systems</td>
+                    <td class="table-element">2023</td>
+                    <td class="table-element">C</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 4401 - Software Security Engineering</td>
+                    <td class="table-element">2024</td>
+                    <td class="table-element">D</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">CS 4233 - Object-Oriented Analysis And Design</td>
+                    <td class="table-element">2024</td>
+                    <td class="table-element">C</td>
+                </tr>
+            </table>
+        </div>
     </div>
-        <table>
-            <tr class="table-row">
-                <th>Course</th>
-                <th>Year</th>
-            </tr>
-            <tr class="table-row">
-                <td>TODO</td>
-                <td>TODO</td>
-            </tr>
-        </table>
-      [Courses]
-      <section>
-        <h1>Languages</h1>
-        <table class="table-overall">
-            <tr class="table-row">
-                <th>Name</th>
-                <th>Experence</th>
-                <th>First tried</th>
-                <th>Applicable project</th>
-                <th>Fun rating</th>
-            </tr>
-            <tr class="table-row">
-                <td>Java</td>
-                <td>High Level</td>
-                <td>~2018</td>
-                <td>Abc fitness internship</td>
-                <td>5</td>
-            </tr>
-            <tr class="table-row">
-                <td>C#</td>
-                <td>mid Level(unity)</td>
-                <td>~2019</td>
-                <td>Unity Game dev</td>
-                <td>6</td>
-            </tr>
-            <tr class="table-row">
-                <td>C</td>
-                <td>mid level</td>
-                <td>~2020</td>
-                <td>WPI systems programing and operating systems and harvard into to cs</td>
-                <td>8</td>
-            </tr>
-            <tr class="table-row">
-                <td>Rust</td>
-                <td>mid level</td>
-                <td>~2021</td>
-                <td>Lots of little experiments</td>
-                <td>8</td>
-            </tr>
-            <tr class="table-row">
-                <td>Go lang</td>
-                <td>mid level</td>
-                <td>~2020</td>
-                <td>Spaceona</td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Javascript</td>
-                <td>High level</td>
-                <td>~2020</td>
-                <td><a href="https://github.com/nick-leslie/learning-light" >Learning light</a></td>
-                <td>7</td>
-            </tr>
-            <tr class="table-row">
-                <td>Typescript</td>
-                <td>High level</td>
-                <td>~2023</td>
-                <td><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
-                <td>8</td>
-            </tr>
-            <tr class="table-row">
-                <td>Python</td>
-                <td>Low level</td>
-                <td>~2019</td>
-                <td>software security engineering</td>
-                <td>3</td>
-            </tr>
-            <tr class="table-row">
-                <td>Gleam</td>
-                <td>Mid level</td>
-                <td>~2024</td>
-                <td><a href="https://github.com/nick-leslie/muse-music-player" >Muse music player</a></td>
-                <td>3</td>
-            </tr>
-        </table>
-        <h1>Frameworks</h1>
-        <table class="table-overall">
-            <tr class="table-row">
-                <th>Name</th>
-                <th>Experence</th>
-                <th>First tried</th>
-                <th>Applicable project</th>
-                <th>Fun rating</th>
-            </tr>
-            <tr class="table-row">
-                <td>React</td>
-                <td>Lots</td>
-                <td>2023</td>
-                <td><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
-                <td>8</td>
-            </tr>
-            <tr class="table-row">
-                <td>Springboot</td>
-                <td>Mid Level</td>
-                <td>2024</td>
-                <td>Abc fitness internship</td>
-                <td>3</td>
-            </tr>
-            <tr class="table-row">
-                <td>Unity</td>
-                <td>Mid Level</td>
-                <td>2019</td>
-                <td>Unity game dev</td>
-                <td>3</td>
-            </tr>
-        </table>
-        <h1>Technologys</h1>
-        <table class="table-overall">
-            <tr class="table-row">
-                <th>Name</th>
-                <th>Experence</th>
-                <th>First tried</th>
-                <th>Applicable project</th>
-                <th>Fun rating</th>
-            </tr>
-            <tr>
-                <td>Unity</td>
-                <td>Mid level</td>
-                <td>~2019</td>
-                <td>Metroidvania game</td>
-                <td>8</td>
-            </tr>
-            <tr class="table-row">
-                <td>Aws</td>
-                <td>Mid level</td>
-                <td>~2020</td>
-                <td><a href="https://github.com/nick-leslie/learning-light" >Learning light</a></td>
-                <td>7</td>
-            </tr>
-            <tr>
-                <td>Terraform</td>
-                <td>Mid level</td>
-                <td>~2023</td>
-                <td><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
-                <td>7</td>
-            </tr>
-            <tr class="table-row">
-                <td>Linux</td>
-                <td>Mid level</td>
-                <td>~2020</td>
-                <td>daily driving linux</td>
-                <td>8</td>
-            </tr>
-            <tr>
-                <td>Postgres</td>
-                <td>Mid level</td>
-                <td>~2020</td>
-                <td><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
-                <td>8</td>
-            </tr>
-            <tr class="table-row">
-                <td>Sqlite</td>
-                <td>Mid level</td>
-                <td>~2020</td>
-                <td>spaceona</td>
-                <td>8</td>
-            </tr>
-        </table>
+    <section>
+            <div class="flex-row gap-5">
+                <h1 onclick="hideTab('languages')">Languages</h1>
+                <h1 onclick="hideTab('frameworks')">Frameworks</h1>
+                <h1 onclick="hideTab('tools')">Tools</h1>
+            </div>
+            <table class="table-overall width-full tabs" id="languages">
+                <tr class="table-row">
+                    <th  class="table-element table-header">Name</th>
+                    <th  class="table-element table-header">Experence</th>
+                    <th  class="table-element table-header">First tried</th>
+                    <th  class="table-element table-header">Applicable project</th>
+                    <th  class="table-element table-header">Fun rating</th>
+                </tr>
+                <tr class="table-row">
+                    <td  class="table-element">Java</td>
+                    <td  class="table-element">High Level</td>
+                    <td  class="table-element">~2018</td>
+                    <td  class="table-element">Abc fitness internship</td>
+                    <td  class="table-element">5</td>
+                </tr>
+                <tr class="table-row">
+                    <td  class="table-element">C#</td>
+                    <td  class="table-element">mid Level(unity)</td>
+                    <td  class="table-element">~2019</td>
+                    <td  class="table-element">Unity Game dev</td>
+                    <td  class="table-element">6</td>
+                </tr>
+                <tr class="table-row">
+                    <td  class="table-element">C</td>
+                    <td  class="table-element">mid level</td>
+                    <td  class="table-element">~2020</td>
+                    <td  class="table-element">WPI systems programing and operating systems and harvard into to cs</td>
+                    <td  class="table-element">8</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element" >Rust</td>
+                    <td class="table-element" >mid level</td>
+                    <td class="table-element" >~2021</td>
+                    <td class="table-element" >Lots of little experiments</td>
+                    <td class="table-element" >8</td>
+                </tr>
+                <tr class="table-row">
+                    <td  class="table-element">Golang</td>
+                    <td  class="table-element">mid level</td>
+                    <td  class="table-element">~2020</td>
+                    <td  class="table-element">Spaceona</td>
+                    <td  class="table-element">7</td>
+                </tr>
+                <tr class="table-row">
+                    <td  class="table-element">Javascript</td>
+                    <td  class="table-element">High level</td>
+                    <td  class="table-element">~2020</td>
+                    <td  class="table-element"><a href="https://github.com/nick-leslie/learning-light" >Learning light</a></td>
+                    <td  class="table-element">7</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Typescript</td>
+                    <td class="table-element">High level</td>
+                    <td class="table-element">~2023</td>
+                    <td class="table-element"><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
+                    <td class="table-element">8</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Python</td>
+                    <td class="table-element">Low level</td>
+                    <td class="table-element">~2019</td>
+                    <td class="table-element">software security engineering</td>
+                    <td class="table-element">3</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element" >Gleam</td>
+                    <td class="table-element" >Mid level</td>
+                    <td class="table-element" >~2024</td>
+                    <td class="table-element" ><a href="https://github.com/nick-leslie/muse-music-player" >Muse music player</a></td>
+                    <td class="table-element" >10</td>
+                </tr>
+            </table>
+            <table class="table-overall width-full tabs tab-hidden" id="frameworks">
+                <tr class="table-row">
+                    <th  class="table-element table-header">Name</th>
+                    <th  class="table-element table-header">Experence</th>
+                    <th  class="table-element table-header">First tried</th>
+                    <th  class="table-element table-header">Applicable project</th>
+                    <th  class="table-element table-header">Fun rating</th>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">React</td>
+                    <td class="table-element">Lots</td>
+                    <td class="table-element">2023</td>
+                    <td class="table-element"><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
+                    <td class="table-element">8</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Springboot</td>
+                    <td class="table-element">Mid Level</td>
+                    <td class="table-element">2024</td>
+                    <td class="table-element">Abc fitness internship</td>
+                    <td class="table-element">3</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Unity</td>
+                    <td class="table-element">Mid Level</td>
+                    <td class="table-element">2019</td>
+                    <td class="table-element">Unity game dev</td>
+                    <td class="table-element">3</td>
+                </tr>
+            </table>
+            <table class="table-overall width-full tabs tab-hidden" id="tools">
+                <tr class="table-row">
+                    <th  class="table-element table-header">Name</th>
+                    <th  class="table-element table-header">Experence</th>
+                    <th  class="table-element table-header">First tried</th>
+                    <th  class="table-element table-header">Applicable project</th>
+                    <th  class="table-element table-header">Fun rating</th>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Unity</td>
+                    <td class="table-element">Mid level</td>
+                    <td class="table-element">~2019</td>
+                    <td class="table-element">Metroidvania game</td>
+                    <td class="table-element">8</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Aws</td>
+                    <td class="table-element">Mid level</td>
+                    <td class="table-element">~2020</td>
+                    <td class="table-element"><a href="https://github.com/nick-leslie/learning-light" >Learning light</a></td>
+                    <td class="table-element">7</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Terraform</td>
+                    <td class="table-element">Mid level</td>
+                    <td class="table-element">~2023</td>
+                    <td class="table-element"><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
+                    <td class="table-element">7</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Linux</td>
+                    <td class="table-element">Mid level</td>
+                    <td class="table-element">~2020</td>
+                    <td class="table-element">daily driving linux</td>
+                    <td class="table-element">8</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Postgres</td>
+                    <td class="table-element">Mid level</td>
+                    <td class="table-element">~2020</td>
+                    <td class="table-element"><a href="https://github.com/nick-leslie/Venice-Project-Center-weboverhall" >Venice project center</a></td>
+                    <td class="table-element">8</td>
+                </tr>
+                <tr class="table-row">
+                    <td class="table-element">Sqlite</td>
+                    <td class="table-element">Mid level</td>
+                    <td class="table-element">~2020</td>
+                    <td class="table-element">spaceona</td>
+                    <td class="table-element">8</td>
+                </tr>
+            </table>
     </section>
   </body>
 </html>
