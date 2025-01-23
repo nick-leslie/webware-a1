@@ -22,7 +22,7 @@ const server = http.createServer( function( request,response ) {
     case '/priv/static/dot_game.mjs':
     case '/app':
       response.setHeader("content-type", "text/javascript")
-      sendFile(response, "./priv/static/dot_game.mjs");
+      sendFile(response, "./priv/static/todo_app.mjs");
       break;
     case '/mainjs':
       response.setHeader("content-type", "text/javascript")
