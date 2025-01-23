@@ -11,6 +11,7 @@
         <a class="nav-element" href="/">About</a>
         <a class="nav-element" href="/hobby.html">Hobbys</a>
     </nav>
+    <div class="main-content">
     <h1>Nick Leslie</h1>
     <div class="grid">
         <div>
@@ -96,10 +97,10 @@
         </div>
     </div>
     <section>
-            <div class="flex-row gap-5">
-                <h1 onclick="hideTab('languages')">Languages</h1>
-                <h1 onclick="hideTab('frameworks')">Frameworks</h1>
-                <h1 onclick="hideTab('tools')">Tools</h1>
+            <div class="flex-row">
+                <h1 class="tab-button tab-button-active" id="languages" onclick="hideTab('languages')">Languages</h1>
+                <h1 class="tab-button" id="frameworks" onclick="hideTab('frameworks')">Frameworks</h1>
+                <h1 class="tab-button" id="tools" onclick="hideTab('tools')">Tools</h1>
             </div>
             <table class="table-overall width-full tabs" id="languages">
                 <tr class="table-row">
@@ -255,5 +256,6 @@
                 </tr>
             </table>
     </section>
+    </div>
   </body>
 </html>

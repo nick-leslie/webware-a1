@@ -3,7 +3,8 @@ const http = require('http'),
       port = 3000;
 
 const server = http.createServer( function( request,response ) {
-  switch (request.url) {
+  //I added this mod so that the server redirects correctly even after form submit
+  switch (request.url.split('?')[0]) {
     case '/':
       sendFile(response, 'index.html');
       break;

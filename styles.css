@@ -1,3 +1,7 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
 .table-overall {
     border-collapse: collapse;
 }
@@ -40,6 +44,9 @@
 .deep-sky-blue {
     background-color: #30C5FF;
 }
+.deep-sky-blue-darkend {
+    background-color: #3b9abf;
+}
 
 .eggshell {
     background-color: #FAF3DD;
@@ -63,6 +70,7 @@
     padding-bottom: 1rem;
     padding-left: 0.5rem;
     padding-right: 0.5rem;
+    text-decoration: none;
 }
 
 .width-full {
@@ -82,4 +90,32 @@ th {
 
 tr:nth-child(even) {
   background-color: #F17105;
+}
+
+.nav-element:hover {
+    background-color: #3b9abf;
+}
+
+.main-content {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+}
+
+
+.tab-button {
+    background-color: #30C5FF;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* border-radius: 25px; */
+}
+
+.tab-button-active {
+    background-color: #3b9abf;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    /* border-radius: 25px; */
 }
