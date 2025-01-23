@@ -1,10 +1,10 @@
 Sample Readme (delete the above when you're ready to submit, and modify the text below with your links and descriptions)
 ---
 
-Nick Leslie: a1-nick-leslie.glitch.me
+Nick Leslie: https://a1-nick-leslie.glitch.me/
 
 This project shows My understanding of basic html css and javascript. addionaly I embeded a frontend framework called luster that is writen with the gleam programing language.
-the styling could use some work on this project however I am mostly proficent with tailwind for styling so I dont feel bad about it. 
+the styling could use some work on this project however I am mostly proficent with tailwind for styling so I dont feel bad about it.
 
 ## Technical Achievements
 1. Styled pages with Css
