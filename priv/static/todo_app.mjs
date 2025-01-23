@@ -2239,6 +2239,9 @@ function text2(content) {
 function h2(attrs, children2) {
   return element("h2", attrs, children2);
 }
+function h3(attrs, children2) {
+  return element("h3", attrs, children2);
+}
 function div(attrs, children2) {
   return element("div", attrs, children2);
 }
@@ -2305,14 +2308,19 @@ function init2(size) {
 }
 function update(model, msg) {
   if (msg instanceof AddTodo) {
-    return [
-      new Model2(
-        insert(model.todos, model.last_todo, model.current_input),
-        model.last_todo + 1,
-        ""
-      ),
-      none()
-    ];
+    let $ = model.current_input;
+    if ($ === "") {
+      return [model, none()];
+    } else {
+      return [
+        new Model2(
+          insert(model.todos, model.last_todo, model.current_input),
+          model.last_todo + 1,
+          ""
+        ),
+        none()
+      ];
+    }
   } else if (msg instanceof RemoveTodo) {
     let index2 = msg[0];
     return [
@@ -2333,7 +2341,10 @@ function todo_view(todo_value) {
     toList([
       p(toList([]), toList([text2(todo_value[1])])),
       button(
-        toList([on_click(new RemoveTodo(todo_value[0]))]),
+        toList([
+          class$("button"),
+          on_click(new RemoveTodo(todo_value[0]))
+        ]),
         toList([text2("remove todo")])
       )
     ])
@@ -2343,9 +2354,10 @@ function view(model) {
   return div(
     toList([]),
     toList([
-      h2(toList([]), toList([text2("Enter a todo")])),
+      h2(toList([]), toList([text2("Todo app example")])),
+      h3(toList([]), toList([text2("add todo")])),
       div(
-        toList([]),
+        toList([class$("flex-row gap-5")]),
         toList([
           input(
             toList([
@@ -2356,7 +2368,7 @@ function view(model) {
             ])
           ),
           button(
-            toList([on_click(new AddTodo())]),
+            toList([class$("button"), on_click(new AddTodo())]),
             toList([text2("Add todo")])
           )
         ])

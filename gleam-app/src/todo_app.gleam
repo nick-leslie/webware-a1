@@ -42,7 +42,11 @@ pub opaque type Msg {
 fn update(model: Model, msg: Msg) -> #(Model,effect.Effect(Msg)) {
   case msg {
     AddTodo() -> {
-    #(Model(todos:dict.insert(model.todos,model.last_todo,model.current_input),last_todo:model.last_todo+1,current_input:""),effect.none())
+      //check if string is empty
+      case model.current_input  {
+        "" -> #(model,effect.none())
+        _ ->  #(Model(todos:dict.insert(model.todos,model.last_todo,model.current_input),last_todo:model.last_todo+1,current_input:""),effect.none())
+      }
     }
     RemoveTodo(index) -> {
       #(Model(..model,todos:dict.delete(model.todos,index),last_todo:model.last_todo),effect.none())
@@ -56,13 +60,15 @@ fn update(model: Model, msg: Msg) -> #(Model,effect.Effect(Msg)) {
 // VIEW ------------------------------------------------------------------------
 fn view(model: Model) -> element.Element(Msg) {
   html.div([],[
-    html.h2([],[html.text("Enter a todo")]),
-    html.div([],[
+    html.h2([],[html.text("Todo app example")]),
+    html.h3([],[html.text("add todo")]),
+    html.div([attribute.class("flex-row gap-5")],[
       html.input([attribute.value(model.current_input),event.on_input(UpdateInput)]),
-      html.button([event.on_click(AddTodo)],[html.text("Add todo")])
+      html.button([attribute.class("button"), event.on_click(AddTodo)],[html.text("Add todo")])
     ]),
     html.div([],
-      dict.to_list(model.todos) |> list.map(todo_view(_))
+      dict.to_list(model.todos)
+      |> list.map(todo_view(_)) //this is using the pipe opperator. the return value of the last function is being used as the input to the next fucntion
     )
   ])
 }
@@ -70,6 +76,6 @@ fn view(model: Model) -> element.Element(Msg) {
 fn todo_view(todo_value:#(Int,String)) {
   html.div([attribute.class("flex-row gap-5")],[
     html.p([],[html.text(todo_value.1)]),
-    html.button([event.on_click(RemoveTodo(todo_value.0))],[html.text("remove todo")])
+    html.button([attribute.class("button"),event.on_click(RemoveTodo(todo_value.0))],[html.text("remove todo")])
   ])
 }

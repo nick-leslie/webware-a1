@@ -36,13 +36,120 @@
           <label>Scripting</label>
           <input name="paradigm" type="radio">
           <br>
-          <input type="submit" value="Submit">
+          <input class="button" type="submit" value="Submit">
       </form>
-      <h1>Intro to Gleam and you</h1>
+      <h1>Why I love gleam</h1>
       <p>To explain why I love gleam im going to show you how to build the simple todo app using gleams frontend framework Luster.
          The core of gleam is its increadble type system. Gleams type system is built around the idea of varent types. varent types mean that multiple values can be represented using a single type.
+         Varent typing is supported by gleams powerful pattern matching. pattern matching is a more powerful version of a switch statment that alows for parts of the case to be extracted as varubles.
+         for example the folowing code can be used to print the first element of a list. <br><code>
+
+             case list {
+                <br>
+                [] -> io.debug(empty)
+                <br>
+                [first_element,..] -> io.debug(first_element )
+                <br>
+             }
+         </code>
+         <br>
+        This is a simple example however the power of pattern matching enables ergonomic error handling, expressive control flow, all in a more consice format.
       </p>
-      <div id="app"></div>
+      <p>
+          Another super power of gleam is that it compiles into javascript and erlang with ffi. this means that gleam supports a powerful backend envorment with erlang and an expressive frontend envorment with javascript.
+          And with ffi you can always use javascript or erlang when gleam cant provide what you need. The way I think about gleam is its like super typescript for javascript because it drasticly simplifys javascript while adding types.
+          While I would love to gush more about why gleam is so cool I dont think this is the right place. I would encorage you to look into gleam on your own. addionaly I will provide a screen shot of my gleam code for the todo app.
+      </p>
+      <h1>Gleam code example</h1>
+      <div class="flex-row gap-5">
+        <div id="app"></div>
+        <div>
+            <h2>source code</h2>
+            <pre class="">
+                import gleam/string
+                import gleam/string_tree
+                import gleam/list
+                import lustre/effect
+                import gleam/dict
+                import lustre
+                import gleam/int
+                import lustre/element
+                import lustre/attribute
+                import gleam/io
+                import lustre/element/html
+                import lustre/event
+
+
+
+                // MAIN ------------------------------------------------------------------------
+
+                pub fn main() {
+                  let app = lustre.application(init, update, view)
+                  let assert Ok(_) = lustre.start(app, "#app", #(10,10))
+                }
+
+                // MODEL -----------------------------------------------------------------------
+
+
+                type Model {
+                  Model(todos:dict.Dict(Int,String),last_todo:Int,current_input:String)
+                }
+
+                fn init(size:#(Int,Int))-> #(Model,effect.Effect(Msg)) {
+                  #(Model(dict.new(),0,""),effect.none())
+                }
+
+                // UPDATE ----------------------------------------------------------------------
+
+                pub opaque type Msg {
+                  AddTodo()
+                  RemoveTodo(Int)
+                  UpdateInput(String)
+                }
+
+                fn update(model: Model, msg: Msg) -> #(Model,effect.Effect(Msg)) {
+                  case msg {
+                    AddTodo() -> {
+                      //check if string is empty
+                      case model.current_input  {
+                        "" -> #(model,effect.none())
+                        _ ->  #(Model(todos:dict.insert(model.todos,model.last_todo,model.current_input),last_todo:model.last_todo+1,current_input:""),effect.none())
+                      }
+                    }
+                    RemoveTodo(index) -> {
+                      #(Model(..model,todos:dict.delete(model.todos,index),last_todo:model.last_todo),effect.none())
+                    }
+                    UpdateInput(input) -> {
+                      #(Model(..model,current_input:input),effect.none())
+                    }
+                  }
+                }
+
+                // VIEW ------------------------------------------------------------------------
+                fn view(model: Model) -> element.Element(Msg) {
+                  html.div([],[
+                    html.h2([],[html.text("Todo app example")]),
+                    html.h3([],[html.text("add todo")]),
+                    html.div([attribute.class("flex-row gap-5")],[
+                      html.input([attribute.value(model.current_input),event.on_input(UpdateInput)]),
+                      html.button([attribute.class("button"), event.on_click(AddTodo)],[html.text("Add todo")])
+                    ]),
+                    html.div([],
+                      dict.to_list(model.todos)
+                      |> list.map(todo_view(_)) //this is using the pipe opperator. the return value of the last function is being used as the input to the next fucntion
+                    )
+                  ])
+                }
+
+                fn todo_view(todo_value:#(Int,String)) {
+                  html.div([attribute.class("flex-row gap-5")],[
+                    html.p([],[html.text(todo_value.1)]),
+                    html.button([attribute.class("button"),event.on_click(RemoveTodo(todo_value.0))],[html.text("remove todo")])
+                  ])
+                }
+            </pre>
+        </div>
+      </div>
     </div>
   </body>
 </html>

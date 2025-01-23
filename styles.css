@@ -119,3 +119,17 @@ tr:nth-child(even) {
     padding-bottom: 0.5rem;
     /* border-radius: 25px; */
 }
+
+.text-white {
+    color:white
+}
+
+.button {
+    background-color: #2E6171;
+    color: white;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    border-radius: 5px;
+}
