@@ -42,17 +42,14 @@
       <p>To explain why I love gleam im going to show you how to build the simple todo app using gleams frontend framework Luster.
          The core of gleam is its increadble type system. Gleams type system is built around the idea of varent types. varent types mean that multiple values can be represented using a single type.
          Varent typing is supported by gleams powerful pattern matching. pattern matching is a more powerful version of a switch statment that alows for parts of the case to be extracted as varubles.
-         for example the folowing code can be used to print the first element of a list. <br><code>
+         for example the folowing code can be used to print the first element of a list.
+        <pre><code>
 
              case list {
-                <br>
                 [] -> io.debug(empty)
-                <br>
                 [first_element,..] -> io.debug(first_element )
-                <br>
              }
-         </code>
-         <br>
+         </code></pre>
         This is a simple example however the power of pattern matching enables ergonomic error handling, expressive control flow, all in a more consice format.
       </p>
       <p>
